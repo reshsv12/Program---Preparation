@@ -1,0 +1,15 @@
+#include <stdio.h>
+int strlength(char*str){
+    if(*str =='\0'){
+        return 0;
+    }
+    return 1 + strlength(str + 1);
+}
+int main() {
+    char str[100];
+    int length;
+    printf("Enter the string:");
+    scanf("%s",str);
+    length = strlength(str);
+    printf("Length of the given string is : %d",length);
+}

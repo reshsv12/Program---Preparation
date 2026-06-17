@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    char seq[50];
+    int i=0,j,num,totcount=0,count=0;
+    printf("Enter the sequence:");
+    fgets(seq, sizeof(seq), stdin);
+    for(i=0; seq[i]!='\0';i++){
+        if(seq[i]== '0'){
+            count++;
+        }
+        else if (seq[i]=='1'){
+         totcount++;   
+        }
+    }
+    for(i=0;i<count;i++){
+        printf("0");
+    }
+    for(j=0;j<totcount;j++){
+        printf("1");
+    }
+}
